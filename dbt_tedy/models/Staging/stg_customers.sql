@@ -17,3 +17,5 @@ FROM source
 )
 
 SELECT * FROM name_merge
+
+--test
