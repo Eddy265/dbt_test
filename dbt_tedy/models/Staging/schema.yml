@@ -1,0 +1,20 @@
+
+version: 2
+
+sources:
+  - name: Instacart
+    description: a clone of the postgres raw database of the instacart.
+    database: Instacart
+    schema: public
+    tables:
+        - name: customers
+          description: raw data for the customers table
+          columns:
+                - name: customer_id
+                  description: primary key for the customers table
+                  tests: 
+                    - unique
+                    - not_null
+                    - relationships:
+                        to: ref('Instacart', 'orders')
+                        field: customer_id
