@@ -18,4 +18,4 @@ FROM source
 
 SELECT * FROM name_merge
 
---CI/CD test
+--CI/CD test 2
